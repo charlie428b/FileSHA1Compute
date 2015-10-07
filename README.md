@@ -1,2 +1,2 @@
-# FileSHA1Compute
+# 文件批量校验工具
 批量校验文件
