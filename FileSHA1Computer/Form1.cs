@@ -76,17 +76,17 @@ namespace FileSHA1Computer
             int countSHA1 = 0;
             foreach (ListViewItem item in listView1.Items)
             {
-                if (textBox1.Text.LastIndexOf('\\') == textBox1.Text.Length - 1)
-                {
-                    textBox1.Text = textBox1.Text.Replace("\\", "");
-                }
+                //if (textBox1.Text.LastIndexOf('\\') == textBox1.Text.Length - 1)
+                //{
+                //    textBox1.Text = textBox1.Text.Replace("\\", "");
+                //}
                 foreach (ListViewItem item2 in listView2.Items)
                 {
-                    if (textBox2.Text.LastIndexOf('\\') == textBox1.Text.Length - 1)
-                    {
-                        textBox2.Text = textBox2.Text.Replace("\\", "");
-                    }
-                    if (item.Text.Replace(textBox1.Text, "") == item2.Text.Replace(textBox2.Text, ""))
+                    //if (textBox2.Text.LastIndexOf('\\') == textBox1.Text.Length - 1)
+                    //{
+                    //    textBox2.Text = textBox2.Text.Replace("\\", "");
+                    //}
+                    if (item.Text.Replace(textBox1.Text, "").Replace("\\", "") == item2.Text.Replace(textBox2.Text, "").Replace("\\", ""))
                     {
                         countName += 1;
                         if (ComputeFileSHA1(item.Text) == ComputeFileSHA1(item2.Text))
